@@ -1,471 +1,632 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-  <title>QuintoAndar</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>QuintoAndar</title>
 
-  <!-- Link Styles -->
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-  <div class="site-container">
-    <!--===== Header =====-->
-    <header class="header">
-  <div class="container header-container">
-    <div class="burger-wrapper">
-      <button class="burger">
-        <span class="burger__line"></span>
-      </button>
-    </div>
-    <a href="#" class="header-logo">
-      <img src="img/logo-icon.svg" alt="Logo Of QuintoAndar" class="logo__icon">
-      <img src="img/logo-text.svg" alt="Logo Of QuintoAndar" class="logo__text">
-    </a>
-    <div class="header-navbar">
-      <div class="header-search">
-        <button class="search__btn btn-reset">
-          <i class="icon-search"></i>
-        </button>
-        <input type="search" id="h-search" placeholder="Nova busca">
-        <button type="reset" class="btn-reset search__reset" title="Click me to clear the input field">
-          <i class="icon-close"></i>
-        </button>
-      </div>
-      <nav class="nav">
-        <a href="#" class="nav__link">Imóveis para alugar</a>
-        <a href="#" class="nav__link">Imóveis para comprar</a>
-        <div class="nav-dropdown__btn">
-          <a href="#" class="nav__link">Para proprietários</a>
-          <i class="icon-arrow-down"></i>
-        </div>
-        <a href="#" class="nav__link">Indicar imóveis</a>
-        <a href="#" class="nav__link">Sobre nós</a>
-      </nav>
-      <a href="#" class="help-link">Ajuda</a>
-      <div class="personal-container">
-        <div class="personal__photo">
-          <img src="img/avatar.svg" alt="Your Avatar" class="avatar">
-        </div>
-        <div class="personal__name">Lara Telles</div>
-        <button class="personal-dropdown__trigger btn-reset">
-          <i class="icon-arrow-down"></i>
-        </button>
-      </div>
-      <div class="burger-wrapper">
-        <button class="burger">
-          <span class="burger__line"></span>
-        </button>
-      </div>
-    </div>
-  </div>
-</header>
-    <main class="main">
-      <!--===== Estate Filter =====-->
-      <section class="estate-filter">
-  <div class="container estate-filter-container">
-    <div class="row m-0">
-      <div class="col-xs-12 p-0">
-        <ul class="breadcrumbs-list">
-          <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Início</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <i class="icon-arrow-right"></i>
-          </li>
-          <li class="breadcrumbs__item">Lista de imóveis</li>
-        </ul>
-      </div>
-      <div class="col-xs-12 p-0">
-        <h1 class="estate__title">Lista de imóveis com home office</h1>
-        <p class="estate-filter__description">
-          Texto de complemento de busca gerado automaticamente pelo Verbolia.
-          Esse layout funciona com máximo de 120 caracteres.
-        </p>
-      </div>
-      <div class="col-xs-12 p-0">
-        <div class="estate-filter-wrapper">
-          <div class="estate-search">
-            <input
-              type="search"
-              id="e-search"
-              placeholder="Filtrar lista por localização"
-            />
-            <button class="estate-search__btn btn-reset">
-              <i class="icon-search"></i>
+    <!-- Link Styles -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="site-container">
+      <!--===== Header =====-->
+      <header class="header">
+        <div class="container header-container">
+          <div class="burger-wrapper">
+            <button class="burger">
+              <span class="burger__line"></span>
             </button>
           </div>
-          <div class="vertical-line"></div>
-          <div class="estate-filter-list">
-            <div class="estate-filter-item house-type">
-              <div class="dropdown" data-control="checkbox-dropdown">
-                <label class="dropdown-label">
-                  <span data-title="Tipo de imóvel">Tipo de imóvel</span>
-                  <button class="btn-reset"><i class="icon-close"></i></button>
-                </label>
-                <div class="dropdown-list">
-                  <div class="dropdown-item">
-                    <input type="checkbox" name="Tipo de imóvel1" id="input1"/>
-                    <label for="input1" class="dropdown-option">
-                      Apartamento
-                    </label>
-                  </div>
-                  <div class="dropdown-item">
-                    <input type="checkbox" name="Tipo de imóvel2" id="input2"/>
-                    <label for="input2" class="dropdown-option">
-                      Casa
-                    </label>
-                  </div>
-                  <div class="dropdown-item">
-                    <input type="checkbox" name="Tipo de imóvel3" id="input3"/>
-                    <label for="input3" class="dropdown-option">
-                      Kitnet/Studio
-                    </label>
-                  </div>
-                  <div class="dropdown-item">
-                    <input type="checkbox" name="Tipo de imóvel4" id="input4"/>
-                    <label for="input4" class="dropdown-option">
-                      Casa em condomínio
-                    </label>
-                  </div>
-                  <div class="dropdown-buttons">
-                    <button class="dropdown-clear">Limpar</button>
-                    <button class="dropdown-apply">Aplicar</button>
-                  </div>
-                </div>
-              </div>
+          <a href="#" class="header-logo">
+            <img
+              src="img/logo-icon.svg"
+              alt="Logo Of QuintoAndar"
+              class="logo__icon"
+            />
+            <img
+              src="img/logo-text.svg"
+              alt="Logo Of QuintoAndar"
+              class="logo__text"
+            />
+          </a>
+          <div class="header-navbar">
+            <div class="header-search">
+              <button class="search__btn btn-reset">
+                <i class="icon-search"></i>
+              </button>
+              <input type="search" id="h-search" placeholder="Nova busca" />
+              <button
+                type="reset"
+                class="btn-reset search__reset"
+                title="Click me to clear the input field"
+              >
+                <i class="icon-close"></i>
+              </button>
             </div>
-            <div class="estate-filter-item bedrooms">
-              <div class="dropdown" data-control="checkbox-dropdown">
-                <label class="dropdown-label">
-                  <span data-title="Número de quartos">Número de quartos</span>
-                  <button class="btn-reset"><i class="icon-close"></i></button>
-                </label>
-                <div class="dropdown-list">
-                  <span class="dropdown__badge">Quartos</span>
-                  <div class="dropdown-item">
-                    <div class="radio-container">
-                      <input type="radio" id="bedrooms-1" name="animal" />
-                      <label for="bedrooms-1">1+</label>
-                    </div>
-                    <div class="radio-container">
-                      <input type="radio" id="bedrooms-2" name="animal" />
-                      <label for="bedrooms-2">2+</label>
-                    </div>
-                    <div class="radio-container">
-                      <input type="radio" id="bedrooms-3" name="animal" />
-                      <label for="bedrooms-3">3+</label>
-                    </div>
-                    <div class="radio-container">
-                      <input type="radio" id="bedrooms-4" name="animal" />
-                      <label for="bedrooms-4">4+</label>
-                    </div>
-                  </div>
-                  <div class="dropdown-buttons">
-                    <button class="dropdown-clear">Limpar</button>
-                    <button class="dropdown-apply">Aplicar</button>
-                  </div>
-                </div>
+            <ul class="nav">
+              <li class="nav__item">
+                <a href="#" class="nav__link">Imóveis para alugar</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Imóveis para comprar</a>
+              </li>
+              <li class="nav__item has-sub-menu">
+                <a href="#" class="nav__link">Para proprietários</a>
+                <i class="icon-arrow-down"></i>
+                <ul class="sub-menu">
+                  <li class="sub-menu__item">
+                    <a href="#" class="sub-menu__link">Para proprietários1</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#" class="sub-menu__link">Para proprietários2</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#" class="sub-menu__link">Para proprietários3</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#" class="sub-menu__link">Para proprietários4</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Indicar imóveis</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Sobre nós</a>
+              </li>
+            </ul>
+            <a href="#" class="help__link">Ajuda</a>
+            <div class="personal-container">
+              <div class="personal__photo">
+                <img src="img/avatar.svg" alt="Your Avatar" class="avatar" />
               </div>
+              <div class="personal__name">Lara Telles</div>
+              <button class="personal-dropdown__trigger btn-reset">
+                <i class="icon-arrow-down"></i>
+              </button>
             </div>
-            <div class="estate-filter-item pricing">
-              <div class="dropdown" data-control="checkbox-dropdown">
-                <label class="dropdown-label">
-                  <span data-title="Preço">Preço</span>
-                  <button class="btn-reset"><i class="icon-close"></i></button>
-                </label>
-                <div class="dropdown-list">
-                  <div class="dropdown-item">
-                    <span class="dropdown__badge">Preço Mínimo </span>
-                    <div class="input-box">
-                      <input type="number" id="min-price" min="1" placeholder="Sem mínimo">
-                    </div>
-                  </div>
-                  <div class="dropdown-item">
-                    <span class="dropdown__badge">Preço Máximo</span>
-                    <div class="input-box">
-                      <input type="number" id="max-price" min="1" placeholder="Sem máximo">
-                    </div>
-                  </div>
-                  <div class="dropdown-buttons">
-                    <button class="dropdown-clear">Limpar</button>
-                    <button class="dropdown-apply">Aplicar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="estate-filter-item garage">
-              <div class="dropdown" data-control="checkbox-dropdown">
-                <label class="dropdown-label">
-                  <span data-title="Vagas de garagem">Vagas de garagem</span>
-                  <button class="btn-reset"><i class="icon-close"></i></button>
-                </label>
-                <div class="dropdown-list">
-                  <span class="dropdown__badge">Vagas de garagem</span>
-                  <div class="dropdown-item">
-                    <div class="radio-container">
-                      <input type="radio" id="garage-all" name="animal" />
-                      <label for="garage-all">Sem vaga</label>
-                    </div>
-                    <div class="radio-container">
-                      <input type="radio" id="garage-1" name="animal" />
-                      <label for="garage-1">1+</label>
-                    </div>
-                    <div class="radio-container">
-                      <input type="radio" id="garage-2" name="animal" />
-                      <label for="garage-2">2+</label>
-                    </div>
-                    <div class="radio-container">
-                      <input type="radio" id="garage-3" name="animal" />
-                      <label for="garage-3">3+</label>
-                    </div>
-                  </div>
-                  <div class="dropdown-buttons">
-                    <button class="dropdown-clear">Limpar</button>
-                    <button class="dropdown-apply">Aplicar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="estate-filter-item furniture">
-              <div class="radio-container">
-                <input type="radio" id="furniture" name="animal" />
-                <label for="furniture">Mobília</label>
-              </div>
-            </div>
-            <div class="estate-filter-item pets">
-              <div class="radio-container">
-                <input type="radio" id="pets" name="animal" />
-                <label for="pets">Aceita pets</label>
-              </div>
+            <div class="burger-wrapper">
+              <button class="burger">
+                <span class="burger__line"></span>
+              </button>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </header>
+      <main class="main">
+        <!--===== Estate Filter =====-->
+        <section class="estate-filter">
+          <div class="container estate-filter-container">
+            <ul class="breadcrumbs-list">
+              <li class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__link">Início</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <i class="icon-arrow-right"></i>
+              </li>
+              <li class="breadcrumbs__item">Lista de imóveis</li>
+            </ul>
 
-      <!--===== Estate Hero =====-->
-      <section class="estate-hero">
-  <div class="container estate-hero-container">
-    <div class="estate-hero-info">
-      <span class="result">821 imóveis encontrados</span>
-      <div class="sort-dropdown">
-        <div class="sort-dropdown__trigger">
-          <i class="icon-arrow-down"></i>
-          <span>Mais recentes</span>
-        </div>
-        <div class="sort-dropdown-list" style="display: none;">
-          <a href="#" class="sort-dropdown__item">Mais recentes</a>
-          <a href="#" class="sort-dropdown__item">Melhores para você</a>
-          <a href="#" class="sort-dropdown__item">Menor preço</a>
-          <a href="#" class="sort-dropdown__item">Maior preço</a>
-        </div>
-      </div>
-    </div>
-    <div class="estate-hero-table">
-      <div class="estate-hero-card">
-        <div class="swiper-container estate-hero-card-slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"> 
-              <img src="img/preview.png" alt="Appartment Photo">
-              <span class="slider__badge">Exclusivo</span>
+            <h1 class="estate__title">Lista de imóveis com home office</h1>
+            <p class="estate-filter__description">
+              Texto de complemento de busca gerado automaticamente pelo
+              Verbolia. Esse layout funciona com máximo de 120 caracteres.
+            </p>
+            <div class="estate-filter-wrapper">
+              <div class="estate-search">
+                <input
+                  type="search"
+                  id="e-search"
+                  placeholder="Filtrar lista por localização"
+                />
+                <button class="estate-search__btn btn-reset">
+                  <i class="icon-search"></i>
+                </button>
+              </div>
+              <div class="vertical-line"></div>
+              <div class="estate-filter-list">
+                <div class="dropdown house-type">
+                  <label class="dropdown-label">
+                    <span class="default-value" data-title="Tipo de imóvel">Tipo de imóvel</span>
+                    <button class="btn-reset">
+                      <i class="icon-close"></i>
+                    </button>
+                  </label>
+                  <div class="dropdown-list">
+                    <div class="dropdown-item">
+                      <input
+                        type="checkbox"
+                        name="Tipo de imóvel1"
+                        id="input1"
+                      />
+                      <label for="input1" class="dropdown-option">
+                        Apartamento
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input
+                        type="checkbox"
+                        name="Tipo de imóvel2"
+                        id="input2"
+                      />
+                      <label for="input2" class="dropdown-option"> Casa </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input
+                        type="checkbox"
+                        name="Tipo de imóvel3"
+                        id="input3"
+                      />
+                      <label for="input3" class="dropdown-option">
+                        Kitnet/Studio
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <input
+                        type="checkbox"
+                        name="Tipo de imóvel4"
+                        id="input4"
+                      />
+                      <label for="input4" class="dropdown-option">
+                        Casa em condomínio
+                      </label>
+                    </div>
+                    <div class="dropdown-buttons">
+                      <button class="dropdown-clear">Limpar</button>
+                      <button class="dropdown-apply">Aplicar</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown bedrooms">
+                  <label class="dropdown-label">
+                    <span class="default-value" data-title="Número de quartos"
+                      >Número de quartos</span
+                    >
+                    <button class="filter-reset btn-reset">
+                      <i class="icon-close"></i>
+                    </button>
+                  </label>
+                  <div class="dropdown-list">
+                    <span class="dropdown__badge">Quartos</span>
+                    <div class="dropdown-item">
+                      <div class="radio-container">
+                        <input type="radio" id="bedrooms-1" name="animal" />
+                        <label for="bedrooms-1">1+</label>
+                      </div>
+                      <div class="radio-container">
+                        <input type="radio" id="bedrooms-2" name="animal" />
+                        <label for="bedrooms-2">2+</label>
+                      </div>
+                      <div class="radio-container">
+                        <input type="radio" id="bedrooms-3" name="animal" />
+                        <label for="bedrooms-3">3+</label>
+                      </div>
+                      <div class="radio-container">
+                        <input type="radio" id="bedrooms-4" name="animal" />
+                        <label for="bedrooms-4">4+</label>
+                      </div>
+                    </div>
+                    <div class="dropdown-buttons">
+                      <button class="dropdown-clear">Limpar</button>
+                      <button class="dropdown-apply">Aplicar</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown pricing">
+                  <label class="dropdown-label">
+                    <span class="default-value" data-title="Preço">Preço</span>
+                    <button class="filter-reset btn-reset">
+                      <i class="icon-close"></i>
+                    </button>
+                  </label>
+                  <div class="dropdown-list">
+                    <div class="dropdown-item">
+                      <span class="dropdown__badge">Preço Mínimo </span>
+                      <div class="input-box">
+                        <input
+                          type="number"
+                          id="min-price"
+                          placeholder="Sem mínimo"
+                        />
+                      </div>
+                    </div>
+                    <div class="dropdown-item">
+                      <span class="dropdown__badge">Preço Máximo</span>
+                      <div class="input-box">
+                        <input
+                          type="number"
+                          id="max-price"
+                          placeholder="Sem máximo"
+                        />
+                      </div>
+                    </div>
+                    <div class="dropdown-buttons">
+                      <button class="dropdown-clear">Limpar</button>
+                      <button class="dropdown-apply">Aplicar</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown garage">
+                  <label class="dropdown-label">
+                    <span class="default-value" data-title="Vagas de garagem">Vagas de garagem</span>
+                    <button class="filter-reset btn-reset">
+                      <i class="icon-close"></i>
+                    </button>
+                  </label>
+                  <div class="dropdown-list">
+                    <span class="dropdown__badge">Vagas de garagem</span>
+                    <div class="dropdown-item">
+                      <div class="radio-container">
+                        <input type="radio" id="garage-all" name="animal" />
+                        <label for="garage-all">Sem vaga</label>
+                      </div>
+                      <div class="radio-container">
+                        <input type="radio" id="garage-1" name="animal" />
+                        <label for="garage-1">1+</label>
+                      </div>
+                      <div class="radio-container">
+                        <input type="radio" id="garage-2" name="animal" />
+                        <label for="garage-2">2+</label>
+                      </div>
+                      <div class="radio-container">
+                        <input type="radio" id="garage-3" name="animal" />
+                        <label for="garage-3">3+</label>
+                      </div>
+                    </div>
+                    <div class="dropdown-buttons">
+                      <button class="dropdown-clear">Limpar</button>
+                      <button class="dropdown-apply">Aplicar</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkbox-container">
+                  <input type="checkbox" id="furniture" name="animal" />
+                  <label for="furniture">Mobília</label>
+                </div>
+                <div class="checkbox-container">
+                  <input type="checkbox" id="pets" name="animal" />
+                  <label for="pets">Aceita pets</label>
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide"> 
-              <img src="img/preview.png" alt="Appartment Photo2">
-              <span class="slider__badge">Exclusivo</span>
+          </div>
+        </section>
+
+        <!--===== Estate Hero =====-->
+        <section class="estate-hero">
+          <div class="container estate-hero-container">
+            <div class="estate-hero-info">
+              <span class="result">821 imóveis encontrados</span>
+              <div class="sort-dropdown">
+                <div class="sort-dropdown__trigger">
+                  <i class="icon-arrow-down"></i>
+                  <span>Mais recentes</span>
+                </div>
+                <div class="sort-dropdown-list" style="display: none">
+                  <a href="#" class="sort-dropdown__item">Mais recentes</a>
+                  <a href="#" class="sort-dropdown__item">Melhores para você</a>
+                  <a href="#" class="sort-dropdown__item">Menor preço</a>
+                  <a href="#" class="sort-dropdown__item">Maior preço</a>
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide"> 
-              <img src="img/preview.png" alt="Appartment Photo3">
-              <span class="slider__badge">Exclusivo</span>
+            <div class="estate-hero-table">
+              <div class="estate-hero-card">
+                <div class="swiper-container estate-hero-card-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="img/preview.png" alt="Appartment Photo" />
+                      <span class="slider__badge">Exclusivo</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/preview.png" alt="Appartment Photo2" />
+                      <span class="slider__badge">Exclusivo</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/preview.png" alt="Appartment Photo3" />
+                      <span class="slider__badge">Exclusivo</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/preview.png" alt="Appartment Photo4" />
+                      <span class="slider__badge">Exclusivo</span>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="img/preview.png" alt="Appartment Photo5" />
+                      <a href="#" class="slider__link"
+                        >Ver detalhes do imóvel</a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-button swiper-button-next"></div>
+                  <div class="swiper-button swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="estate-hero-card-info">
+                  <div class="estate-hero-card-text">
+                    <h3 class="estate-hero-card__title">
+                      Apartamento para alugar com 1 quarto, 90m²
+                    </h3>
+                    <p class="estate-hero-card__subtitle">
+                      Rua Doutor Tomás Carvalhal, Paraíso, São Paulo
+                    </p>
+                    <p class="estate-hero-card__description">
+                      Próximo ao parque do Ibirapuera, IBM, Faculdade Belas
+                      Artes, das estações Paraíso e Ana Rosa do metrô, padaria a
+                      200 metros, feira na rua de trás, vasto comércio na
+                      região.
+                    </p>
+                  </div>
+                  <div class="estate-hero-card-price">
+                    <div class="estate-hero-card-price__rent">
+                      Aluguel R$2.000
+                    </div>
+                    <div class="estate-hero-card-price__total">
+                      Total R$ 3.300
+                    </div>
+                  </div>
+                </div>
+                <div class="estate-hero-card-properties">
+                  <div class="estate-hero-card-properties__item">
+                    <img
+                      src="img/ruler.svg"
+                      alt="Ruler icon"
+                      class="estate-hero-card-properties__icon"
+                    />
+                    <span>64 m²</span>
+                  </div>
+                  <div class="estate-hero-card-properties__item">
+                    <img
+                      src="img/bed.svg"
+                      alt="Bed icon"
+                      class="estate-hero-card-properties__icon"
+                    />
+                    <span>2 quartos</span>
+                  </div>
+                  <div class="estate-hero-card-properties__item">
+                    <img
+                      src="img/garage.svg"
+                      alt="Car icon"
+                      class="estate-hero-card-properties__icon"
+                    />
+                    <span>1 vaga</span>
+                  </div>
+                  <div class="estate-hero-card-properties__item">
+                    <img
+                      src="img/couch.svg"
+                      alt="Couch icon"
+                      class="estate-hero-card-properties__icon"
+                    />
+                    <span>Mobiliado</span>
+                  </div>
+                  <div class="estate-hero-card-properties__item">
+                    <img
+                      src="img/shower.svg"
+                      alt="Shower icon"
+                      class="estate-hero-card-properties__icon"
+                    />
+                    <span>1 banheiro</span>
+                  </div>
+                  <div class="estate-hero-card-properties__item">
+                    <img
+                      src="img/subway.svg"
+                      alt="Subway icon"
+                      class="estate-hero-card-properties__icon"
+                    />
+                    <span>Metrô prox.</span>
+                  </div>
+                  <div class="estate-hero-card-properties__item">
+                    <img
+                      src="img/apartment.svg"
+                      alt="Apartment icon"
+                      class="estate-hero-card-properties__icon"
+                    />
+                    <span>10º Andar</span>
+                  </div>
+                  <div class="estate-hero-card-properties__item">
+                    <img
+                      src="img/pets.svg"
+                      alt="Pets icon"
+                      class="estate-hero-card-properties__icon"
+                    />
+                    <span>Aceita pet</span>
+                  </div>
+                  <button class="estate-hero-card__link btn-reset">
+                    Ver imóvel
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide"> 
-              <img src="img/preview.png" alt="Appartment Photo4">
-              <span class="slider__badge">Exclusivo</span>
-            </div>
-            <div class="swiper-slide"> 
-              <img src="img/preview.png" alt="Appartment Photo5">
-              <a href="#" class="slider__link">Ver detalhes do imóvel</a>
+            <div class="pagination-container">
+              <div class="pagination">
+                <a class="pagination-item prev disabled" href="#">
+                  <i class="icon-arrow-down"></i>
+                </a>
+                <a class="pagination-item current" href="#">1</a>
+                <a class="pagination-item" href="#">2</a>
+                <a class="pagination-item" href="#">3</a>
+                <a class="pagination-item" href="#">4</a>
+                <span class="pagination-item dots" href="#">...</span>
+                <a class="pagination-item" href="#">15</a>
+                <a class="pagination-item next" href="#">
+                  <i class="icon-arrow-down"></i>
+                </a>
+              </div>
+              <span class="pagination-result"
+                >Mostrando 1-20 de 821 imóveis</span
+              >
             </div>
           </div>
-          <div class="swiper-button swiper-button-next"></div>
-          <div class="swiper-button swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
+        </section>
+        <!--===== Estate Info =====-->
+        <section class="estate-info">
+          <div class="container estate-info-container">
+            <h2 class="block__title">Lista de imóveis com home office</h2>
+            <p>
+              Texto de complemento de busca gerado automaticamente pelo
+              Verbolia. Texto de complemento de busca gerado automaticamente
+              pelo Verbolia. Texto de complemento de busca gerado
+              automaticamente pelo Verbolia. Texto de complemento de busca
+              gerado automaticamente pelo Verbolia. Texto de complemento de
+              busca gerado automaticamente pelo Verbolia. Texto de complemento
+              de busca gerado automaticamente pelo Verbolia. Texto de
+              complemento de busca gerado automaticamente pelo Verbolia.
+            </p>
+          </div>
+        </section>
+        <!--===== Estate Properties =====-->
+        <section class="estate-properties">
+          <div class="container estate-properties-container">
+            <h2 class="block__title">
+              Esses imóveis também podem te interessar
+            </h2>
+            <ul class="estate-properties-list">
+              <li class="estate-properties__item">
+                <a href="#" class="estate-properties__link"
+                  >Imóveis térreos em Vila Mariana</a
+                >
+              </li>
+              <li class="estate-properties__item">
+                <a href="#" class="estate-properties__link"
+                  >Imóveis com home office em Moema</a
+                >
+              </li>
+              <li class="estate-properties__item">
+                <a href="#" class="estate-properties__link"
+                  >Imóveis com dois quartos na Av. Paulista</a
+                >
+              </li>
+            </ul>
+            <ul class="estate-properties-list">
+              <li class="estate-properties__item">
+                <a href="#" class="estate-properties__link"
+                  >Imóveis com varanda em Pinheiros</a
+                >
+              </li>
+              <li class="estate-properties__item">
+                <a href="#" class="estate-properties__link"
+                  >Comprar kitnet ou studio com armários de madeira em Recreio
+                  dos Bandeirantes, Rio de Janeiro</a
+                >
+              </li>
+              <li class="estate-properties__item">
+                <a href="#" class="estate-properties__link"
+                  >Imóveis com varanda em Pinheiros</a
+                >
+              </li>
+            </ul>
+            <ul class="estate-properties-list">
+              <li class="estate-properties__item">
+                <a href="#" class="estate-properties__link"
+                  >Imóveis com varanda em Pinheiros</a
+                >
+              </li>
+              <li class="estate-properties__item">
+                <a href="#" class="estate-properties__link"
+                  >Imóveis com varanda em Pinheiros</a
+                >
+              </li>
+              <li class="estate-properties__item">
+                <a href="#" class="estate-properties__link"
+                  >Imóveis com varanda em Pinheiros</a
+                >
+              </li>
+            </ul>
+            <div class="estate-properties-more">
+              <div class="estate-properties-more__image">
+                <img src="img/dog.svg" alt="Dog with letter" />
+              </div>
+              <span class="block__subtitle"
+                >Ainda não encontrou o que procura?</span
+              >
+              <p>
+                Que tal experimentar uma pesquisa avançada no nosso buscador?
+              </p>
+              <a href="#" class="estate-properties-more__link"
+                >Buscar imóveis</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+      <!--===== Footer =====-->
+      <footer class="footer">
+        <div class="container footer-container">
+          <div class="footer-main">
+            <div class="footer-desktop">
+              <a href="#" class="footer__logo">
+                <img
+                  src="img/footer-logo.svg"
+                  alt="Logo Of QuintoAndar"
+                  class="logo-icon"
+                />
+              </a>
+              <p>
+                O QuintoAndar é uma empresa que usa tecnologia e design para
+                simplificar a locação de imóveis residenciais.
+              </p>
+            </div>
+            <div class="footer-list">
+              <a href="#" class="footer__link">Carreiras</a>
+              <a href="#" class="footer__link">Seja um corretor</a>
+              <a href="#" class="footer__link">Seja um fotógrafo</a>
+              <a href="#" class="footer__link">Seja um vistoriador</a>
+            </div>
+            <div class="footer-list">
+              <a href="#" class="footer__link">Indique um imóvel</a>
+              <a href="#" class="footer__link">Trabalha na Portaria?</a>
+              <a href="#" class="footer__link">Sobre o QuintoAndar</a>
+              <a href="#" class="footer__link">Contato</a>
+            </div>
+          </div>
+          <div class="footer-line"></div>
+          <div class="footer-copyright">
+            <p>
+              ® QuintoAndar Serviços Imobiliários Ltda. <br />CRECI-SP J24.344
+              (Ver outros) • Termos e Privacidade <br />Versão: 08/08/2018 21:25
+            </p>
+            <div class="footer-social-list">
+              <a href="#" class="footer-social__link">
+                <img
+                  src="img/facebook-logo.svg"
+                  alt="Logo Of Facebook"
+                  class="social-icon"
+                />
+              </a>
+              <a href="#" class="footer-social__link">
+                <img
+                  src="img/twitter-logo.svg"
+                  alt="Logo Of Twitter"
+                  class="social-icon"
+                />
+              </a>
+              <a href="#" class="footer-social__link">
+                <img
+                  src="img/medium-logo.svg"
+                  alt="Logo Of Medium"
+                  class="social-icon"
+                />
+              </a>
+              <a href="#" class="footer-social__link">
+                <img
+                  src="img/linkedin-logo.svg"
+                  alt="Logo Of LinkedIn"
+                  class="social-icon"
+                />
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="estate-hero-card-info">
-          <div class="estate-hero-card-text">
-            <h3 class="estate-hero-card__title">Apartamento para alugar com 1 quarto, 90m²</h3>
-            <p class="estate-hero-card__subtitle">Rua Doutor Tomás Carvalhal, Paraíso, São Paulo</p>
-            <p class="estate-hero-card__description">Próximo ao parque do Ibirapuera, IBM, Faculdade Belas Artes, das estações Paraíso e Ana Rosa do metrô, padaria a 200 metros, feira na rua de trás, vasto comércio na região.</p>  
-          </div>
-          <div class="estate-hero-card-price">
-            <div class="estate-hero-card-price__rent">Aluguel R$2.000</div>
-            <div class="estate-hero-card-price__total">Total R$ 3.300</div>
-          </div>
-        </div>
-        <div class="estate-hero-card-properties">
-          <div class="estate-hero-card-properties__item">
-            <img src="img/ruler.svg" alt="Ruler icon" class="estate-hero-card-properties__icon">
-            <span>64 m²</span>
-          </div>
-          <div class="estate-hero-card-properties__item">
-            <img src="img/bed.svg" alt="Bed icon" class="estate-hero-card-properties__icon">
-            <span>2 quartos</span>
-          </div>
-          <div class="estate-hero-card-properties__item">
-            <img src="img/garage.svg" alt="Car icon" class="estate-hero-card-properties__icon">
-            <span>1 vaga</span>
-          </div>
-          <div class="estate-hero-card-properties__item">
-            <img src="img/couch.svg" alt="Couch icon" class="estate-hero-card-properties__icon">
-            <span>Mobiliado</span>
-          </div>
-          <div class="estate-hero-card-properties__item">
-            <img src="img/shower.svg" alt="Shower icon" class="estate-hero-card-properties__icon">
-            <span>1 banheiro</span>
-          </div>
-          <div class="estate-hero-card-properties__item">
-            <img src="img/subway.svg" alt="Subway icon" class="estate-hero-card-properties__icon">
-            <span>Metrô prox.</span>
-          </div>
-          <div class="estate-hero-card-properties__item">
-            <img src="img/apartment.svg" alt="Apartment icon" class="estate-hero-card-properties__icon">
-            <span>10º Andar</span>
-          </div>
-          <div class="estate-hero-card-properties__item">
-            <img src="img/pets.svg" alt="Pets icon" class="estate-hero-card-properties__icon">
-            <span>Aceita pet</span>
-          </div>
-          <button class="estate-hero-card__link btn-reset">Ver imóvel</button>
-        </div>
-      </div>
+      </footer>
     </div>
-    <div class="pagination-container">
-      <div class="pagination">
-        <a class="pagination-item prev disabled" href="#">
-          <i class="icon-arrow-down"></i>
-        </a>
-        <a class="pagination-item current" href="#">1</a>
-        <a class="pagination-item" href="#">2</a>
-        <a class="pagination-item" href="#">3</a>
-        <a class="pagination-item" href="#">4</a>
-        <span class="pagination-item dots" href="#">...</span>
-        <a class="pagination-item" href="#">15</a>
-        <a class="pagination-item next" href="#">
-          <i class="icon-arrow-down"></i>
-        </a>
-      </div>
-      <span class="pagination-result">Mostrando 1-20 de 821 imóveis</span>
-    </div>
-  </div>
-</section>
-      <!--===== Estate Info =====-->
-      <section class="estate-info">
-  <div class="container estate-info-container">
-    <h2 class="block__title">Lista de imóveis com home office</h2>
-    <p>Texto de complemento de busca gerado automaticamente pelo Verbolia. Texto de complemento de busca gerado automaticamente pelo Verbolia. Texto de complemento de busca gerado automaticamente pelo Verbolia. Texto de complemento de busca gerado automaticamente pelo Verbolia. Texto de complemento de busca gerado automaticamente pelo Verbolia. Texto de complemento de busca gerado automaticamente pelo Verbolia. Texto de complemento de busca gerado automaticamente pelo Verbolia. </p>
-  </div>
-</section>
-      <!--===== Estate Properties =====-->
-      <section class="estate-properties">
-  <div class="container estate-properties-container">
-    <h2 class="block__title">Esses imóveis também podem te interessar</h2>
-    <ul class="estate-properties-list">
-      <li class="estate-properties__item">
-        <a href="#" class="estate-properties__link">Imóveis térreos em Vila Mariana</a>
-      </li>
-      <li class="estate-properties__item">
-        <a href="#" class="estate-properties__link">Imóveis com home office em Moema</a>
-      </li>
-      <li class="estate-properties__item">
-        <a href="#" class="estate-properties__link">Imóveis com dois quartos na Av. Paulista</a>
-      </li>
-    </ul>
-    <ul class="estate-properties-list">
-      <li class="estate-properties__item">
-        <a href="#" class="estate-properties__link">Imóveis com varanda em Pinheiros</a>
-      </li>
-      <li class="estate-properties__item">
-        <a href="#" class="estate-properties__link">Comprar kitnet ou studio com armários de madeira em Recreio dos Bandeirantes, Rio de Janeiro</a>
-      </li>
-      <li class="estate-properties__item">
-        <a href="#" class="estate-properties__link">Imóveis com varanda em Pinheiros</a>
-      </li>
-    </ul>
-    <ul class="estate-properties-list">
-      <li class="estate-properties__item">
-        <a href="#" class="estate-properties__link">Imóveis com varanda em Pinheiros</a>
-      </li>
-      <li class="estate-properties__item">
-        <a href="#" class="estate-properties__link">Imóveis com varanda em Pinheiros</a>
-      </li>
-      <li class="estate-properties__item">
-        <a href="#" class="estate-properties__link">Imóveis com varanda em Pinheiros</a>
-      </li>
-    </ul>
-    <div class="estate-properties-more">
-      <div class="estate-properties-more__image">
-        <img src="img/dog.svg" alt="Dog with letter">
-      </div>
-      <span class="block__subtitle">Ainda não encontrou o que procura?</span>
-      <p>Que tal experimentar uma pesquisa avançada no nosso buscador?</p>
-      <a href="#" class="estate-properties-more__link">Buscar imóveis</a>
-    </div>
-  </div>
-</section>
-    </main>
-    <!--===== Footer =====-->
-    <footer class="footer">
-  <div class="container footer-container">
-    <div class="footer-main">
-      <div class="footer-desktop">
-        <a href="#" class="footer__logo">
-          <img src="img/footer-logo.svg" alt="Logo Of QuintoAndar" class="logo-icon">
-        </a>
-        <p>O QuintoAndar é uma empresa que usa tecnologia e design para simplificar a locação de imóveis residenciais.</p>
-      </div>
-      <div class="footer-list">
-        <a href="#" class="footer__link">Carreiras</a>
-        <a href="#" class="footer__link">Seja um corretor</a>
-        <a href="#" class="footer__link">Seja um fotógrafo</a>
-        <a href="#" class="footer__link">Seja um vistoriador</a>
-      </div>
-      <div class="footer-list">
-        <a href="#" class="footer__link">Indique um imóvel</a>
-        <a href="#" class="footer__link">Trabalha na Portaria?</a>
-        <a href="#" class="footer__link">Sobre o QuintoAndar</a>
-        <a href="#" class="footer__link">Contato</a>
-      </div>
-    </div>
-    <div class="footer-line"></div>
-    <div class="footer-copyright">
-      <p>® QuintoAndar Serviços Imobiliários Ltda.
-        <br>CRECI-SP J24.344 (Ver outros) • Termos e Privacidade
-        <br>Versão: 08/08/2018 21:25
-      </p>
-      <div class="footer-social-list">
-        <a href="#" class="footer-social__link">
-          <img src="img/facebook-logo.svg" alt="Logo Of Facebook" class="social-icon">
-        </a>
-        <a href="#" class="footer-social__link">
-          <img src="img/twitter-logo.svg" alt="Logo Of Twitter" class="social-icon">
-        </a>
-        <a href="#" class="footer-social__link">
-          <img src="img/medium-logo.svg" alt="Logo Of Medium" class="social-icon">
-        </a>
-        <a href="#" class="footer-social__link">
-          <img src="img/linkedin-logo.svg" alt="Logo Of LinkedIn" class="social-icon">
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
-  </div>
-  <!-- Link Scripts -->
-  <script src="js/vendor.js"></script>
-  <script src="js/main.js"></script>
-</body>
+    <!-- Link Scripts -->
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
