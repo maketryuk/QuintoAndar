@@ -947,6 +947,7 @@ input::-webkit-search-results-decoration {
 
 .breadcrumbs__link {
   color: #757575;
+  text-decoration: none; 
 }
 
 .estate-filter {
@@ -976,24 +977,39 @@ input::-webkit-search-results-decoration {
   margin-bottom: 16px;
 }
 
-.estate-search {
+.dropdown-search {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 8px 12px;
+  padding: 0;
   border: 1px solid #bdbdbd;
   border-radius: 100px;
   width: 312px;
   min-width: 312px;
 }
-.estate-search__btn .icon-search {
-  font-size: 24px;
-  color: #757575;
+.dropdown-search .dropdown-label {
+  width: 100%;
+  height: 100%;
+  padding: 10px 16px;
+  height: 40px;
+  line-height: 1.4;
 }
 
+.dropdown-search .dropdown-list {
+  min-height: unset;
+}
+.dropdown-search .icon-close:before {
+  color: #757575;
+}
+.dropdown-search.has-value .dropdown-label:after {
+  display: none;
+}
+.dropdown-search.has-value .search-reset {
+  display: block;
+}
 #e-search {
   border: none;
   outline: none;
@@ -1107,7 +1123,22 @@ input::-webkit-search-results-decoration {
   opacity: 1;
   transition-delay: 0.2s;
 }
+.dropdown-search .dropdown-label {
+  width: 100%;
+  border: none;
+}
+.dropdown-search.on .dropdown-label, .dropdown-search.on .dropdown-label:hover {
+  background-color: transparent;
+  border: none;
+}
+.dropdown-search .dropdown-label:hover {
+  background-color: transparent;
+  border: none;
+}
 
+.dropdown-search .dropdown-label:after {
+  content: "\e902";
+}
 
 .dropdown-list {
   z-index: 20;
@@ -1441,28 +1472,53 @@ input::-webkit-search-results-decoration {
   max-width: 148px;
   background-color: transparent;
 }
+.dropdown-search .btn-reset {
+  margin: 0;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .input-box::before {
   content: "R$";
   position: absolute;
-  left: 0;
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
   color: #424242;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
+  opacity: 0;
+  visibility: hidden;
 }
 .input-box input {
   width: 148px;
   outline: none;
   border: 1px solid #bdbdbd;
   border-radius: 8px;
-  padding: 12px 16px;
+  padding: 12px 16px 12px 16px;
   color: #424242;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
 }
+
+.input-box.active:before {
+  opacity: 1;
+  visibility: visible;
+}
+.input-box.active input {
+  padding: 12px 16px 12px 40px;
+}
+
 .input-box input::-moz-placeholder {
   color: #757575;
   font-size: 16px;
@@ -1477,6 +1533,9 @@ input::-webkit-search-results-decoration {
   color: #757575;
   font-size: 16px;
   font-weight: 400;
+}
+.input-box input:focus::placeholder {
+  color: transparent;
 }
 
 .furniture input[type="radio"]:checked + label,
@@ -1506,7 +1565,10 @@ input::-webkit-search-results-decoration {
     display: none;
   }
   .estate-filter-wrapper {
-    padding-top: 12px;
+    padding-top: 0;
+  }
+  .estate__title {
+    margin-bottom: 24px;
   }
 }
 
@@ -1516,7 +1578,31 @@ input::-webkit-search-results-decoration {
     flex-wrap: nowrap;
     overflow-y: hidden;
     overflow-x: auto;
-    padding-top: 16px;
+    padding-top: 0;
+  }
+  .dropdown {
+    margin-bottom: 0;
+  }
+  .dropdown-search {
+    margin-bottom: 28px;
+  }
+  .estate-filter-list .checkbox-container {
+    margin-bottom: 0;
+  }
+  .estate__title, .dropdown-search {
+    transition: all .1s ease-in-out;
+  }
+  .estate-filter.scroll-down .estate__title, .estate-filter.scroll-down .dropdown-search {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    margin: 0;
+  }
+  .estate-filter.scroll-up .dropdown-search {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    margin-bottom: 28px;
   }
   .estate-filter-wrapper {
     flex-direction: column;
@@ -1545,6 +1631,13 @@ input::-webkit-search-results-decoration {
     max-width: 100%;
     width: unset;
     min-width: unset;
+  }
+  .estate__title {
+    font-size: 21px;
+    font-weight: 700;
+  }
+  .dropdown-search {
+    width: 100%;
   }
 }
 

@@ -120,21 +120,61 @@
               Verbolia. Esse layout funciona com máximo de 120 caracteres.
             </p>
             <div class="estate-filter-wrapper">
-              <div class="estate-search">
-                <input
-                  type="search"
-                  id="e-search"
-                  placeholder="Filtrar lista por localização"
-                />
-                <button class="estate-search__btn btn-reset">
-                  <i class="icon-search"></i>
-                </button>
+              <div class="dropdown dropdown-search">
+                <label class="dropdown-label">
+                  <input
+                    type="search"
+                    name="estate-filter-search"
+                    id="e-search"
+                    placeholder="Filtrar lista por localização"
+                  />
+                  <button class="search-reset btn-reset">
+                      <i class="icon-close"></i>
+                    </button>
+                </label>
+                <div class="dropdown-list">
+                  <div class="dropdown-item">
+                    <input type="checkbox" name="Moema" id="Moema" class="check"/>
+                    <label for="Moema" class="dropdown-option">Moema</label>
+                  </div>
+                  <div class="dropdown-item">
+                    <input type="checkbox" name="Pinheiros" id="Pinheiros" class="check"/>
+                    <label for="Pinheiros" class="dropdown-option">Pinheiros</label>
+                  </div>
+                  <div class="dropdown-item">
+                    <input type="checkbox" name="Paraíso" id="Paraíso" class="check"/>
+                    <label for="Paraíso" class="dropdown-option">Paraíso</label>
+                  </div>
+                  <div class="dropdown-item">
+                    <input type="checkbox" name="Vila-Mariana" id="Vila-Mariana" class="check"/>
+                    <label for="Vila-Mariana" class="dropdown-option">Vila Mariana</label>
+                  </div>
+                  <div class="dropdown-item">
+                    <input type="checkbox" name="Vila-Madalena" id="Vila-Madalena" class="check"/>
+                    <label for="Vila-Madalena" class="dropdown-option">Vila Madalena</label>
+                  </div>
+                  <div class="dropdown-item">
+                    <input type="checkbox" name="Mooca" id="Mooca" class="check"/>
+                    <label for="Mooca" class="dropdown-option">Mooca</label>
+                  </div>
+                  <div class="dropdown-item">
+                    <input type="checkbox" name="Bela-Vista" id="Bela-Vista" class="check"/>
+                    <label for="Bela-Vista" class="dropdown-option">Bela Vista</label>
+                  </div>
+                  <div class="dropdown-item">
+                    <input type="checkbox" name="Jardins" id="Jardins" class="check"/>
+                    <label for="Jardins" class="dropdown-option">Jardins</label>
+                  </div>
+                </div>
               </div>
+
               <div class="vertical-line"></div>
               <div class="estate-filter-list">
                 <div class="dropdown house-type">
                   <label class="dropdown-label">
-                    <span class="default-value" data-title="Tipo de imóvel">Tipo de imóvel</span>
+                    <span class="default-value" data-title="Tipo de imóvel"
+                      >Tipo de imóvel</span
+                    >
                     <button class="btn-reset">
                       <i class="icon-close"></i>
                     </button>
@@ -231,7 +271,7 @@
                       <span class="dropdown__badge">Preço Mínimo </span>
                       <div class="input-box">
                         <input
-                          type="number"
+                          type="text"
                           id="min-price"
                           placeholder="Sem mínimo"
                         />
@@ -241,7 +281,7 @@
                       <span class="dropdown__badge">Preço Máximo</span>
                       <div class="input-box">
                         <input
-                          type="number"
+                          type="text"
                           id="max-price"
                           placeholder="Sem máximo"
                         />
@@ -255,7 +295,9 @@
                 </div>
                 <div class="dropdown garage">
                   <label class="dropdown-label">
-                    <span class="default-value" data-title="Vagas de garagem">Vagas de garagem</span>
+                    <span class="default-value" data-title="Vagas de garagem"
+                      >Vagas de garagem</span
+                    >
                     <button class="filter-reset btn-reset">
                       <i class="icon-close"></i>
                     </button>

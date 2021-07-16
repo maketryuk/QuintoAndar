@@ -49,6 +49,17 @@ let front = {
           $('.search__reset').removeClass('active');
         }
       }
+
+      $( ".input-box input" ).focus(function() {
+        $(this).parent().addClass('active')
+      });
+      $( ".input-box input" ).focusout(function() {
+        if ($(this).val() > 0) {
+          $(this).parent().addClass('active')
+        } else {
+          $(this).parent().removeClass('active')
+        }
+      });
   }
 };
 
@@ -77,11 +88,83 @@ $(document).on('click', '.dropdown-label', function () {
 });
 
 $(document).on("click", function(event){
+  var $trigger = $(".sort-dropdown");
+  if($trigger !== event.target && !$trigger.has(event.target).length){
+    $(".sort-dropdown-list").slideUp();
+  }            
+});
+
+$(document).on("click", function(event){
   var $trigger = $(".dropdown");
   if($trigger !== event.target && !$trigger.has(event.target).length){
     $(".dropdown").removeClass('on');
   }            
 });
+
+function checkboxDropdown(el) {
+  var $el = $(el)
+
+  function updateStatus(label, result) {
+    if(!result.length) {
+      label.html('');
+    }
+    if (result.length > 0) {
+      $('.dropdown-search').addClass('has-value')
+    } else {
+      $('.dropdown-search').removeClass('has-value')
+    }
+  };
+  
+  $el.each(function(i, element) {
+      $label = $(this).find('#e-search'),
+      $inputs = $(this).find('.check'),
+      $searchReset = $(this).find('.btn-reset');
+      defaultChecked = $(this).find('input[type=checkbox]:checked'),
+      result = [];
+    
+    updateStatus($label, result);
+    if(defaultChecked.length) {
+      defaultChecked.each(function () {
+        result.push($(this).next().text());
+        $label.val(result.join("; "));
+      });
+    }
+    $inputs.on('change', function() {
+      var checked = $(this).is(':checked');
+      var checkedText = $(this).next().text();
+      if(checked) {
+        result.push(checkedText);
+        $label.val(result.join("; "));
+      }else{
+        let index = result.indexOf(checkedText);
+        if (index >= 0) {
+          result.splice(index, 1);
+        }
+        $label.val(result.join("; "));
+      }
+      updateStatus($label, result);
+    });
+    $searchReset.on('click', function(){
+      result = [];
+      $label.val('');
+      $inputs.prop('checked', false);
+      updateStatus($label, result);
+      $('.dropdown-item').show();
+    })
+  });
+};
+checkboxDropdown('.dropdown-search');
+
+
+$(document).ready(function(){
+  $("#e-search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".dropdown-search .dropdown-option").filter(function() {
+      $(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
 
 $(document).on('click', '.dropdown-apply', function () {
   let checked = $(this).parent().parent().find(':checked');
@@ -111,14 +194,73 @@ $(document).on('click','.pricing .dropdown-apply', function(){
   let maxPrice = $('#max-price').val();
   if ($('#min-price').val() > 0 && $('#max-price').val() > 0) {
     $('.pricing .dropdown-label').attr('class', 'dropdown-label one-selected');
-    $('.pricing .dropdown-label span').html('Aluguel R$' + minPrice + '-' + maxPrice)
+    $('.pricing .dropdown-label span').html('Aluguel R$ &nbsp' + getNumberWithCommas(minPrice) + ' - ' + getNumberWithCommas(maxPrice))
   } else if ($('#min-price').val() === '' && $('#max-price').val() > 0) {
     $('.pricing .dropdown-label').attr('class', 'dropdown-label one-selected');
-    $('.pricing .dropdown-label span').html('Aluguel a partir de R$' + maxPrice)
+    $('.pricing .dropdown-label span').html('Aluguel a partir de R$ &nbsp' + getNumberWithCommas(maxPrice))
   } else if ($('#min-price').val() > 0 && $('#max-price').val() === '') {
     $('.pricing .dropdown-label').attr('class', 'dropdown-label one-selected');
-    $('.pricing .dropdown-label span').html('Aluguel até R$' + minPrice)
+    $('.pricing .dropdown-label span').html('Aluguel até R$ &nbsp' + getNumberWithCommas(minPrice))
   } else {
     $('.pricing .dropdown-label').attr('class', 'dropdown-label default');
   }
+  function getNumberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
 })
+
+$("#min-price, #max-price").keyup(function(event){
+  if(event.which >= 37 && event.which <= 40) return;
+  $(this).val(function(index, value){
+    return value
+    .replace(/\D/g, "")
+      .replace(/([0-9])([0-9]{3})$/, '$1.$2')  
+      .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",")
+    ;
+  });
+  $(this).siblings('.field__value').val($(this).val().replace(/,/g, ''))
+});
+
+
+
+if(window.matchMedia('(max-width: 767px)').matches){
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100 ) {
+      $('.estate-filter').addClass('scroll-down');
+      // $('.estate__title, .dropdown-search').slideUp(200);
+    } else {
+      $('.estate-filter').removeClass("scroll-down");  
+      // $('.estate__title, .dropdown-search').slideDown(200);
+    }
+  });
+
+  var lastScrollTop = 0;
+  $(window).scroll(function(event){
+     var st = $(this).scrollTop();
+     if (st > lastScrollTop){
+      $('.estate-filter').removeClass('scroll-up');
+     } else {
+      $('.estate-filter').addClass('scroll-up');
+     }
+     lastScrollTop = st;
+  });
+
+} else {
+
+    // $(window).scroll(function () {
+    //   if ($(this).scrollTop() > 350 ) {
+    //     $('main').addClass('padding');
+    //     $('.header__main').addClass("fixed");
+    //   } else {
+    //     $('.header__main').removeClass("fixed");  
+    //     $('main').removeClass('padding');
+    //   }
+    // });
+    // $(window).scroll(function () {
+    //   if ($(this).scrollTop() > 450 ) {
+    //     $('.header__main').addClass("reveal");
+    //   } else {
+    //     $('.header__main').removeClass("reveal"); 
+    //   }
+    // });
+}
