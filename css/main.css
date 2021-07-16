@@ -976,7 +976,9 @@ input::-webkit-search-results-decoration {
   line-height: 1.2;
   margin-bottom: 16px;
 }
-
+.dropdown__close {
+  display: none;
+}
 .dropdown-search {
   display: flex;
   align-items: center;
@@ -1080,7 +1082,7 @@ input::-webkit-search-results-decoration {
 }
 
 .dropdown .btn-reset {
-  z-index: 99999;
+  z-index: 99;
   display: none;
   margin-right: 12px;
 }
@@ -1573,6 +1575,9 @@ input[type=number] {
 }
 
 @media screen and (max-width: 767px) {
+  .estate-hero {
+    margin-top: 0;
+  }
   .estate-filter-list {
     width: 100%;
     flex-wrap: nowrap;
@@ -1616,6 +1621,7 @@ input[type=number] {
     bottom: 0;
     left: 0;
     width: 100%;
+    z-index: 100;
   }
   .dropdown-list::before {
     content: "";
@@ -1626,6 +1632,7 @@ input[type=number] {
     height: 100vh;
     background-color: #424242;
     opacity: 0.5;
+    z-index: 100;
   }
   .estate-search {
     max-width: 100%;
@@ -1638,6 +1645,28 @@ input[type=number] {
   }
   .dropdown-search {
     width: 100%;
+  }
+  .dropdown__close {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .dropdown__close:before, .dropdown__close:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #424242;
+    position: absolute;
+    top: 8px;
+  }
+  .dropdown__close:before {
+    transform: rotate(135deg);
+  }
+  .dropdown__close:after {
+    transform: rotate(45deg);
   }
 }
 

@@ -87,6 +87,10 @@ $(document).on('click', '.dropdown-label', function () {
   $(this).parent().addClass('on');
 });
 
+$(document).on('click', '.dropdown__close', function () {
+  $(".dropdown").removeClass('on');
+});
+
 $(document).on("click", function(event){
   var $trigger = $(".sort-dropdown");
   if($trigger !== event.target && !$trigger.has(event.target).length){
@@ -155,7 +159,6 @@ function checkboxDropdown(el) {
 };
 checkboxDropdown('.dropdown-search');
 
-
 $(document).ready(function(){
   $("#e-search").on("keyup", function() {
     var value = $(this).val().toLowerCase();
@@ -164,7 +167,6 @@ $(document).ready(function(){
     });
   });
 });
-
 
 $(document).on('click', '.dropdown-apply', function () {
   let checked = $(this).parent().parent().find(':checked');
@@ -188,6 +190,12 @@ $(document).on('click', '.dropdown-label .icon-close', function (e) {
   $(this).parent().parent().attr('class','dropdown-label default').find('.default-value').html('');
   e.stopPropagation();
 });
+
+$(document).on('click', '.pricing .dropdown-clear', function () {
+  $('.input-box').removeClass('active');
+  $('#min-price').val('');
+  $('#max-price').val('');
+})  
 
 $(document).on('click','.pricing .dropdown-apply', function(){
   let minPrice = $('#min-price').val();
@@ -221,16 +229,12 @@ $("#min-price, #max-price").keyup(function(event){
   $(this).siblings('.field__value').val($(this).val().replace(/,/g, ''))
 });
 
-
-
 if(window.matchMedia('(max-width: 767px)').matches){
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100 ) {
       $('.estate-filter').addClass('scroll-down');
-      // $('.estate__title, .dropdown-search').slideUp(200);
     } else {
       $('.estate-filter').removeClass("scroll-down");  
-      // $('.estate__title, .dropdown-search').slideDown(200);
     }
   });
 
@@ -244,23 +248,22 @@ if(window.matchMedia('(max-width: 767px)').matches){
      }
      lastScrollTop = st;
   });
-
+  $(document).on('click', '.dropdown__close', function () {
+    $(".dropdown").removeClass('on');
+  });
 } else {
-
-    // $(window).scroll(function () {
-    //   if ($(this).scrollTop() > 350 ) {
-    //     $('main').addClass('padding');
-    //     $('.header__main').addClass("fixed");
-    //   } else {
-    //     $('.header__main').removeClass("fixed");  
-    //     $('main').removeClass('padding');
-    //   }
-    // });
-    // $(window).scroll(function () {
-    //   if ($(this).scrollTop() > 450 ) {
-    //     $('.header__main').addClass("reveal");
-    //   } else {
-    //     $('.header__main').removeClass("reveal"); 
-    //   }
-    // });
+  null
 }
+
+$(function(){
+  var filterHeight = $('.estate-filter').height() + 24;
+  var headerHeight = $('.header').height() + 1;
+  $('.estate-hero').css('padding-top', filterHeight + headerHeight)
+  $( window ).on("resize", function() {
+    var filterHeight = $('.estate-filter').height() + 24;
+    var headerHeight = $('.header').height() + 1;
+    console.log('filterHeight:' + filterHeight)
+    console.log('headerHeight:' + headerHeight)
+    $('.estate-hero').css('padding-top', filterHeight + headerHeight)
+  });
+});
