@@ -188,6 +188,8 @@ $(document).on('click', '.dropdown-clear', function () {
 
 $(document).on('click', '.dropdown-label .icon-close', function (e) {
   $(this).parent().parent().attr('class','dropdown-label default').find('.default-value').html('');
+  $(this).parent().parent().parent().find('input').prop('checked', false);
+
   e.stopPropagation();
 });
 
@@ -262,8 +264,6 @@ $(function(){
   $( window ).on("resize", function() {
     var filterHeight = $('.estate-filter').height() + 24;
     var headerHeight = $('.header').height() + 1;
-    console.log('filterHeight:' + filterHeight)
-    console.log('headerHeight:' + headerHeight)
     $('.estate-hero').css('padding-top', filterHeight + headerHeight)
   });
 });
