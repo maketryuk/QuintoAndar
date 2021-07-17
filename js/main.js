@@ -16,7 +16,6 @@ let front = {
   },
   events: function () {
       let self = this;
-      
       var buttons = document.getElementsByClassName('estate-hero-card__link');
       Array.prototype.forEach.call(buttons, function (b) {
         b.addEventListener('mousedown', createRipple);
@@ -257,13 +256,18 @@ if(window.matchMedia('(max-width: 767px)').matches){
   null
 }
 
-$(function(){
-  var filterHeight = $('.estate-filter').height() + 24;
-  var headerHeight = $('.header').height() + 1;
-  $('.estate-hero').css('padding-top', filterHeight + headerHeight)
-  $( window ).on("resize", function() {
+if(window.matchMedia('(min-width: 767px)').matches){
+  $(function(){
     var filterHeight = $('.estate-filter').height() + 24;
     var headerHeight = $('.header').height() + 1;
     $('.estate-hero').css('padding-top', filterHeight + headerHeight)
+    $( window ).on("resize", function() {
+      var filterHeight = $('.estate-filter').height() + 24;
+      var headerHeight = $('.header').height() + 1;
+      $('.estate-hero').css('padding-top', filterHeight + headerHeight)
+    });
   });
-});
+} else {
+  null
+}
+

@@ -1471,7 +1471,7 @@ input[type=number] {
 }
 
 .estate-hero {
-  padding-top: 237px;
+  padding-top: 264px;
   margin-top: 24px;
   margin-bottom: 32px;
 }
@@ -2123,6 +2123,12 @@ input[type=number] {
   }
   .estate-hero {
     margin-top: 0;
+    padding-top: 276px;
+  }
+  .estate-hero-container {
+    border-top: 1px solid #eeeeee;
+    background: #FAFAFA;
+    padding-top: 3px;
   }
   .estate-filter-list {
     width: 100%;
@@ -2153,7 +2159,7 @@ input[type=number] {
     height: auto;
     opacity: 1;
     visibility: visible;
-    margin-bottom: 16px;
+    margin-bottom: 28px;
   }
   .estate-filter-wrapper {
     flex-direction: column;
