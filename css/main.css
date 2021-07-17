@@ -800,10 +800,15 @@ input::-webkit-search-results-decoration {
   justify-content: center;
   max-width: 36px;
   max-height: 36px;
+
+}
+.footer-social__link:hover img {
+  transform: scale(1.1);
 }
 .footer-social__link img {
   width: 100%;
   height: 100%;
+  transition: all .3s ease-in-out;
 }
 .footer-social__link:not(:last-child) {
   margin-right: 16px;
