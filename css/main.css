@@ -8,6 +8,30 @@
 }
 
 @font-face {
+  font-family: "Textos";
+  src: url("../fonts/../fonts/QuintoAndarTextos-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Textos";
+  src: url("../fonts/../fonts/QuintoAndarTextos-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Titulos";
+  src: url("../fonts/../fonts/QuintoAndarTitulos-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?55og1");
   src: url("../fonts/icomoon.eot?55og1#iefix") format("embedded-opentype"),
@@ -181,7 +205,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: "ask", sans-serif;
+  font-family: "Textos", sans-serif;
   background-color: white;
 }
 img {
@@ -408,8 +432,10 @@ input::-webkit-search-results-decoration {
 }
 
 .block__title {
+  font-family: 'Titulos', sans-serif;
   color: black;
   font-size: 21px;
+  font-weight: 500;
   line-height: 1.2;
   text-align: center;
 }
@@ -490,6 +516,7 @@ input::-webkit-search-results-decoration {
 }
 
 #h-search {
+  font-family: 'Textos', sans-serif;
   color: #757575;
   font-size: 16px;
   font-weight: 400;
@@ -501,16 +528,19 @@ input::-webkit-search-results-decoration {
   width: 100%;
 }
 #h-search::-moz-placeholder {
+  font-family: 'Textos', sans-serif;
   color: #bdbdbd;
   font-size: 14px;
   font-weight: 400;
 }
 #h-search:-ms-input-placeholder {
+  font-family: 'Textos', sans-serif;
   color: #bdbdbd;
   font-size: 14px;
   font-weight: 400;
 }
 #h-search::placeholder {
+  font-family: 'Textos', sans-serif;
   color: #bdbdbd;
   font-size: 14px;
   font-weight: 400;
@@ -891,6 +921,7 @@ input::-webkit-search-results-decoration {
 }
 
 .estate__title {
+  font-family: 'Titulos', sans-serif;
   color: black;
   font-size: 24px;
   font-weight: 500;
@@ -941,24 +972,32 @@ input::-webkit-search-results-decoration {
   display: block;
 }
 #e-search {
+  font-family: 'Textos', sans-serif;
+  color: #424242;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
   border: none;
   outline: none;
   background: transparent;
   width: 100%;
 }
 #e-search::-moz-placeholder {
+  font-family: 'Textos', sans-serif;
   color: #bdbdbd;
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
 }
 #e-search:-ms-input-placeholder {
+  font-family: 'Textos', sans-serif;
   color: #bdbdbd;
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
 }
 #e-search::placeholder {
+  font-family: 'Textos', sans-serif;
   color: #bdbdbd;
   font-size: 14px;
   font-weight: 400;
@@ -1519,6 +1558,7 @@ input[type=number] {
   padding: 24px 16px 24px 24px;
 }
 .estate-hero-card__title {
+  font-family: 'Titulos', sans-serif;
   color: #424242;
   font-size: 21px;
   font-weight: 500;
@@ -1556,6 +1596,7 @@ input[type=number] {
   margin-bottom: 4px;
 }
 .estate-hero-card-price__total {
+  font-family: 'Titulos', sans-serif;
   color: #009b5d;
   font-size: 21px;
   line-height: 1.1;
@@ -1576,8 +1617,9 @@ input[type=number] {
   margin-bottom: 16px;
 }
 .estate-hero-card-properties__item span {
-  color: black;
+  color: #424242;
   font-size: 14px;
+  font-weight: 400;
   line-height: 1.4;
 }
 .estate-hero-card-properties__icon {
@@ -1596,6 +1638,7 @@ input[type=number] {
   width: 100%;
   color: #5063f0;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.4;
   text-align: center;
   border: 1px solid #5063f0;
@@ -1894,7 +1937,7 @@ input[type=number] {
 .estate-properties-more__link {
   color: white;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.3;
   padding: 8px 16px;
   background-color: #5063f0;
