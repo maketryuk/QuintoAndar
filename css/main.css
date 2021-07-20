@@ -303,9 +303,6 @@ input::-webkit-search-results-decoration {
 #h-search::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
-.nav__item {
-  padding: 0 12px;
-}
 .nav__link, .help__link {
   color: #424242;
   font-size: 16px;
@@ -427,6 +424,9 @@ input::-webkit-search-results-decoration {
 @media (max-width: 767px) {
   .footer-list:not(:last-child) {
     border-bottom: 1px solid rgba(217, 214, 211, 0.7);
+  }
+  .footer-copyright p {
+    font-size: 12px;
   }
 }
 .breadcrumbs__item {

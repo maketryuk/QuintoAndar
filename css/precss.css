@@ -611,9 +611,6 @@ ul {
   .footer-copyright {
     flex-direction: column-reverse;
   }
-  .footer-copyright p {
-    font-size: 12px;
-  }
   .footer-social-list {
     margin-bottom: 16px;
   }
@@ -729,9 +726,6 @@ ul {
   z-index: 99;
   display: none;
   margin-right: 12px;
-}
-.dropdown .btn-reset .icon-close {
-  font-size: 24px;
 }
 .dropdown {
   position: relative;
@@ -869,7 +863,6 @@ margin-left: 8px;
   display: none;
 }
 .dropdown-label:after {
-  font-family: "icomoon";
   content: "\e900";
   position: absolute;
   right: 12px;
@@ -922,9 +915,6 @@ margin-left: 8px;
 }
 .radio-container label,
 .checkbox-container label {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.3;
   display: block;
   padding: 9px 16px;
   width: -webkit-fit-content;
@@ -1091,7 +1081,6 @@ input[type="number"] {
   width: 100%;
   text-align: center;
   padding: 8px 16px;
-  border-radius: 8px;
   overflow: hidden;
 }
 .estate-hero-card__link .ripple {
@@ -1261,6 +1250,9 @@ input[type="number"] {
   padding: 8px 16px;
 }
 @media (max-width: 1400px) {
+  .has-sub-menu i {
+    top: 7px;
+  }
   .container {
     max-width: 1120px;
   }
@@ -1279,6 +1271,10 @@ input[type="number"] {
 }
 
 @media (max-width: 1200px) {
+  .has-sub-menu i {
+    top: 2px;
+    right: -25px;
+  }
   .header {
     height: 57px;
   }
@@ -1337,14 +1333,12 @@ input[type="number"] {
   }
   .help-link {
     margin: 0;
-    font-size: 16px;
   }
   .nav {
     flex-direction: column;
     align-items: flex-start;
   }
   .nav__link {
-    font-size: 16px;
     margin-bottom: 16px;
   }
   .nav-dropdown__btn {
@@ -1597,7 +1591,6 @@ input[type="number"] {
     transform: translateY(-50%);
     width: 32px;
     height: 32px;
-    border-radius: 100%;
   }
   .swiper-button-next {
     right: 5px;
