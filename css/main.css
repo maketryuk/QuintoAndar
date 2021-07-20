@@ -514,6 +514,37 @@ input::-webkit-search-results-decoration {
 .header-search .search__reset i::before {
   color: #757575;
 }
+.header-login {
+  position: relative;
+  text-decoration: none;
+  color: #5063f0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  border: 1px solid #5063f0;
+  padding: 8px 38px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: all 0.15s ease-in-out;
+}
+
+.header-login .ripple {
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  transform: scale(0);
+  -webkit-animation: ripple 0.4s linear;
+  animation: ripple 0.4s linear;
+}
+.header-login:hover {
+  background-color: #e9e9fd;
+}
+.header-login:active {
+  color: #ffffff;
+  background-color: #5063f0;
+}
 
 #h-search {
   font-family: 'Textos', sans-serif;
@@ -1968,6 +1999,9 @@ input[type=number] {
   .estate-filter-wrapper .vertical-line {
     display: none;
   }
+  .header-login {
+    width: 100%;
+  }
 }
 
 
@@ -2046,9 +2080,12 @@ input[type=number] {
   .personal-container {
     margin: 16px 0;
   }
+  .header-login {
+    width: auto;
+  } 
 }
 
-@media screen and (max-width: 991px) {
+@media (max-width: 991px) {
   .breadcrumbs-list {
     display: none;
   }
