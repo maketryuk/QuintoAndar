@@ -448,6 +448,7 @@ input::-webkit-search-results-decoration {
 }
 
 .header {
+  height: 67px;
   position: fixed;
   top: 0;
   left: 0;
@@ -455,6 +456,9 @@ input::-webkit-search-results-decoration {
   border-bottom: 1px solid #e0e0e0;
   background-color: #fff;
   z-index: 50;
+}
+.header .container {
+  height: 100%;
 }
 .header-navbar {
   display: flex;
@@ -2006,6 +2010,9 @@ input[type=number] {
 
 
 @media (max-width: 1200px) {
+  .header {
+    height: 57px;
+  }
   .nav__item {
     padding: 0;
   }
@@ -2019,6 +2026,9 @@ input[type=number] {
   }
   .burger-wrapper {
     display: block;
+  }
+  .burger {
+    display: flex;
   }
   .logo__text {
     display: block;
@@ -2046,7 +2056,7 @@ input[type=number] {
   .header-navbar .burger-wrapper {
     position: absolute;
     right: 16px;
-    top: 16px;
+    top: 24px;
   }
   .header-navbar_active {
     transform: translateX(0);
