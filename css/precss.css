@@ -39,11 +39,6 @@
 .icon-search:before {
   content: "\e902";
 }
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 15px;
-}
 html,
 body,
 div,
@@ -314,9 +309,9 @@ ul {
   padding: 0;
 }
 .container {
-  max-width: 1366px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 40px;
 }
 .block__title {
   text-align: center;
@@ -350,7 +345,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 16px;
+  padding: 8px 40px;
 }
 .header-search {
   position: relative;
@@ -1248,17 +1243,11 @@ input[type="number"] {
   .has-sub-menu i {
     top: 7px;
   }
-  .container {
-    max-width: 1120px;
-  }
   .help__link {
-    margin: 0 10px 0 18px;
+    margin: 0 20px 0 auto;
   }
   .estate-filter-wrapper .vertical-line {
     display: none;
-  }
-  .header-login {
-    width: 100%;
   }
   .estate-filter-list {
     flex-wrap: wrap;
