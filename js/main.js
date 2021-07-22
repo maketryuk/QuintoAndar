@@ -232,7 +232,7 @@ $("#min-price, #max-price").keyup(function(event){
 
 if(window.matchMedia('(max-width: 767px)').matches){
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 100 ) {
+    if ($(this).scrollTop() > 250 ) {
       $('.estate-filter').addClass('scroll-down');
     } else {
       $('.estate-filter').removeClass("scroll-down");  
@@ -256,18 +256,18 @@ if(window.matchMedia('(max-width: 767px)').matches){
   null
 }
 
-if(window.matchMedia('(min-width: 767px)').matches){
-  $(function(){
-    var filterHeight = $('.estate-filter').height() + 24;
-    var headerHeight = $('.header').height() + 1;
-    $('.estate-hero').css('padding-top', filterHeight + headerHeight)
-    $( window ).on("resize", function() {
-      var filterHeight = $('.estate-filter').height() + 24;
-      var headerHeight = $('.header').height() + 1;
-      $('.estate-hero').css('padding-top', filterHeight + headerHeight)
-    });
-  });
-} else {
-  null
-}
+// if(window.matchMedia('(min-width: 767px)').matches){
+//   $(function(){
+//     var filterHeight = $('.estate-filter').height() + 24;
+//     var headerHeight = $('.header').height() + 1;
+//     $('.estate-hero').css('padding-top', filterHeight + headerHeight)
+//     $( window ).on("resize", function() {
+//       var filterHeight = $('.estate-filter').height() + 24;
+//       var headerHeight = $('.header').height() + 1;
+//       $('.estate-hero').css('padding-top', filterHeight + headerHeight)
+//     });
+//   });
+// } else {
+//   null
+// }
 

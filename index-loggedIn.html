@@ -22,30 +22,12 @@
           </div>
           <a href="#" class="header-logo">
             <img
-              src="img/logo-icon.svg"
-              alt="Logo Of QuintoAndar"
-              class="logo__icon"
-            />
-            <img
-              src="img/logo-text.svg"
+              src="img/main-logo.svg"
               alt="Logo Of QuintoAndar"
               class="logo__text"
             />
           </a>
           <div class="header-navbar">
-            <div class="header-search">
-              <button class="search__btn btn-reset">
-                <i class="icon-search"></i>
-              </button>
-              <input type="search" id="h-search" placeholder="Nova busca" />
-              <button
-                type="reset"
-                class="btn-reset search__reset"
-                title="Click me to clear the input field"
-              >
-                <i class="icon-close"></i>
-              </button>
-            </div>
             <ul class="nav">
               <li class="nav__item">
                 <a href="#" class="nav__link">Imóveis para alugar</a>
@@ -79,9 +61,15 @@
               </li>
             </ul>
             <a href="#" class="help__link">Ajuda</a>
-            <a href="#" class="header-login btn-reset">
-              Entrar
-            </a>
+            <div class="personal-container">
+              <div class="personal__photo">
+                <img src="img/avatar.svg" alt="Your Avatar" class="avatar" />
+              </div>
+              <div class="personal__name">Lara Telles</div>
+              <button class="personal-dropdown__trigger btn-reset">
+                <i class="icon-arrow-down"></i>
+              </button>
+            </div>
             <div class="burger-wrapper">
               <button class="burger">
                 <span class="burger__line"></span>
@@ -117,88 +105,40 @@
                     placeholder="Filtrar lista por localização"
                   />
                   <button class="search-reset btn-reset">
-                    <i class="icon-close"></i>
-                  </button>
+                      <i class="icon-close"></i>
+                    </button>
                 </label>
                 <div class="dropdown-list">
                   <div class="dropdown-item">
-                    <input
-                      type="checkbox"
-                      name="Moema"
-                      id="Moema"
-                      class="check"
-                    />
+                    <input type="checkbox" name="Moema" id="Moema" class="check"/>
                     <label for="Moema" class="dropdown-option">Moema</label>
                   </div>
                   <div class="dropdown-item">
-                    <input
-                      type="checkbox"
-                      name="Pinheiros"
-                      id="Pinheiros"
-                      class="check"
-                    />
-                    <label for="Pinheiros" class="dropdown-option"
-                      >Pinheiros</label
-                    >
+                    <input type="checkbox" name="Pinheiros" id="Pinheiros" class="check"/>
+                    <label for="Pinheiros" class="dropdown-option">Pinheiros</label>
                   </div>
                   <div class="dropdown-item">
-                    <input
-                      type="checkbox"
-                      name="Paraíso"
-                      id="Paraíso"
-                      class="check"
-                    />
+                    <input type="checkbox" name="Paraíso" id="Paraíso" class="check"/>
                     <label for="Paraíso" class="dropdown-option">Paraíso</label>
                   </div>
                   <div class="dropdown-item">
-                    <input
-                      type="checkbox"
-                      name="Vila-Mariana"
-                      id="Vila-Mariana"
-                      class="check"
-                    />
-                    <label for="Vila-Mariana" class="dropdown-option"
-                      >Vila Mariana</label
-                    >
+                    <input type="checkbox" name="Vila-Mariana" id="Vila-Mariana" class="check"/>
+                    <label for="Vila-Mariana" class="dropdown-option">Vila Mariana</label>
                   </div>
                   <div class="dropdown-item">
-                    <input
-                      type="checkbox"
-                      name="Vila-Madalena"
-                      id="Vila-Madalena"
-                      class="check"
-                    />
-                    <label for="Vila-Madalena" class="dropdown-option"
-                      >Vila Madalena</label
-                    >
+                    <input type="checkbox" name="Vila-Madalena" id="Vila-Madalena" class="check"/>
+                    <label for="Vila-Madalena" class="dropdown-option">Vila Madalena</label>
                   </div>
                   <div class="dropdown-item">
-                    <input
-                      type="checkbox"
-                      name="Mooca"
-                      id="Mooca"
-                      class="check"
-                    />
+                    <input type="checkbox" name="Mooca" id="Mooca" class="check"/>
                     <label for="Mooca" class="dropdown-option">Mooca</label>
                   </div>
                   <div class="dropdown-item">
-                    <input
-                      type="checkbox"
-                      name="Bela-Vista"
-                      id="Bela-Vista"
-                      class="check"
-                    />
-                    <label for="Bela-Vista" class="dropdown-option"
-                      >Bela Vista</label
-                    >
+                    <input type="checkbox" name="Bela-Vista" id="Bela-Vista" class="check"/>
+                    <label for="Bela-Vista" class="dropdown-option">Bela Vista</label>
                   </div>
                   <div class="dropdown-item">
-                    <input
-                      type="checkbox"
-                      name="Jardins"
-                      id="Jardins"
-                      class="check"
-                    />
+                    <input type="checkbox" name="Jardins" id="Jardins" class="check"/>
                     <label for="Jardins" class="dropdown-option">Jardins</label>
                   </div>
                   <div class="dropdown__close"></div>
@@ -375,7 +315,7 @@
                 </div>
                 <div class="checkbox-container">
                   <input type="checkbox" id="furniture" name="animal" />
-                  <label for="furniture">Mobília</label>
+                  <label for="furniture">Mobiliado</label>
                 </div>
                 <div class="checkbox-container">
                   <input type="checkbox" id="pets" name="animal" />
@@ -920,7 +860,7 @@
           <div class="footer-copyright">
             <p>
               ® QuintoAndar Serviços Imobiliários Ltda. <br />CRECI-SP J24.344
-              (Ver outros) • Termos e Privacidade <br />Versão: 08/08/2018 21:25
+              (Ver outros) • Termos e Privacidade
             </p>
             <div class="footer-social-list">
               <a href="#" class="footer-social__link">
