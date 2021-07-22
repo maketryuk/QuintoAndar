@@ -639,7 +639,6 @@ input::-webkit-search-results-decoration {
   font-family: "icomoon";
   color: #424242;
   font-size: 24px;
-  pointer-events: none;
 }
 .dropdown-label::before {
   border: 1px solid #5063f0;

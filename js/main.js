@@ -81,11 +81,6 @@ function createRipple(e) {
   circle.classList.add('ripple');
 }
 
-$(document).on('click', '.dropdown-label', function () {
-  $(".dropdown").removeClass('on');
-  $(this).parent().addClass('on');
-});
-
 $(document).on('click', '.dropdown__close', function () {
   $(".dropdown").removeClass('on');
 });
@@ -94,13 +89,6 @@ $(document).on("click", function(event){
   var $trigger = $(".sort-dropdown");
   if($trigger !== event.target && !$trigger.has(event.target).length){
     $(".sort-dropdown-list").slideUp();
-  }            
-});
-
-$(document).on("click", function(event){
-  var $trigger = $(".dropdown");
-  if($trigger !== event.target && !$trigger.has(event.target).length){
-    $(".dropdown").removeClass('on');
   }            
 });
 
@@ -256,18 +244,18 @@ if(window.matchMedia('(max-width: 767px)').matches){
   null
 }
 
-// if(window.matchMedia('(min-width: 767px)').matches){
-//   $(function(){
-//     var filterHeight = $('.estate-filter').height() + 24;
-//     var headerHeight = $('.header').height() + 1;
-//     $('.estate-hero').css('padding-top', filterHeight + headerHeight)
-//     $( window ).on("resize", function() {
-//       var filterHeight = $('.estate-filter').height() + 24;
-//       var headerHeight = $('.header').height() + 1;
-//       $('.estate-hero').css('padding-top', filterHeight + headerHeight)
-//     });
-//   });
-// } else {
-//   null
-// }
+$(document).on('click', '.dropdown-label', function () {
+  if ($(this).parent().hasClass('on')){
+    $(this).parent().removeClass('on')
+  } else {
+    $(".dropdown").removeClass('on');
+    $(this).parent().addClass('on')
+  }
+});
 
+$(document).on("click", function(event){
+  var $trigger = $(".dropdown");
+  if($trigger !== event.target && !$trigger.has(event.target).length){
+    $(".dropdown").removeClass('on');
+  }            
+});
