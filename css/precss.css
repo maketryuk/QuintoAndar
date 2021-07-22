@@ -706,7 +706,7 @@ ul {
   height: fit-content;
 }
 .estate-filter-list .checkbox-container {
-  margin: 0 12px 12px 0;
+  margin: 6px 12px 6px 0;
 }
 .estate-filter-item {
   position: relative;
@@ -721,7 +721,7 @@ ul {
 }
 .dropdown {
   position: relative;
-  margin: 0 12px 12px 0;
+  margin: 6px 12px 6px 0;
 }
 .dropdown.on .dropdown-label:active::before {
   opacity: 0;
